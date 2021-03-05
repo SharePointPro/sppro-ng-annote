@@ -1,0 +1,62 @@
+<div class="toolbar sppro-toolbar">
+    <table class="toolbarTable">
+
+        <tbody>
+            <tr>
+                <td (click)="onDrawableChange(DrawableEnum.FreePathDrawable)"
+                    [ngClass]="getClass(DrawableEnum.FreePathDrawable)">
+                    <fa-icon [icon]="faPencilAlt"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onDrawableChange(DrawableEnum.SquareDrawable)"
+                    [ngClass]="getClass(DrawableEnum.SquareDrawable)">
+                    <fa-icon [icon]="faSquare"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onDrawableChange(DrawableEnum.CircleDrawable)"
+                    [ngClass]="getClass(DrawableEnum.CircleDrawable)">
+                    <fa-icon [icon]="faCircle"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onDrawableChange(DrawableEnum.ArrowDrawable)"
+                    [ngClass]="getClass(DrawableEnum.ArrowDrawable)">
+                    <fa-icon [icon]="faLongArrowAltRight"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onDrawableChange(DrawableEnum.TextDrawable)"
+                    [ngClass]="getClass(DrawableEnum.TextDrawable)">
+                    <fa-icon [icon]="faFont"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="showColor()" class="toolButton">
+                    <fa-icon [icon]="faSquareFull" [style.color]="color"></fa-icon>
+                    <div *ngIf="showColorPicker" class='color-picker-wrapper'>
+                        <color-photoshop class='color-picker' [color]="color" (onAccept)="onAccept()" (onCancel)="onColorPicked($event)" (onChangeComplete)="onColorChange($event)"></color-photoshop>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onUndo.emit()" class="toolButton">
+                    <fa-icon [icon]="faUndo"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onClear.emit()" class="toolButton">
+                    <fa-icon [icon]="faBan"></fa-icon>
+                </td>
+            </tr>
+            <tr>
+                <td (click)="onSave.emit()" class="toolButton">
+                    <fa-icon [icon]="faSave"></fa-icon>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "sppro-ng-annote",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+    "@fortawesome/angular-fontawesome": "^0.8.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "konva": "^7.2.5",
+    "ngx-color": "^6.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+    }
+}

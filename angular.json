@@ -1,0 +1,171 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sppro-ng-annote": {
+      "projectType": "library",
+      "root": "projects/sppro-ng-annote",
+      "sourceRoot": "projects/sppro-ng-annote/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/sppro-ng-annote/tsconfig.lib.json",
+            "project": "projects/sppro-ng-annote/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sppro-ng-annote/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sppro-ng-annote/src/test.ts",
+            "tsConfig": "projects/sppro-ng-annote/tsconfig.spec.json",
+            "karmaConfig": "projects/sppro-ng-annote/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sppro-ng-annote/tsconfig.lib.json",
+              "projects/sppro-ng-annote/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "sppro-ng-example": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/sppro-ng-example",
+      "sourceRoot": "projects/sppro-ng-example/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sppro-ng-example",
+            "index": "projects/sppro-ng-example/src/index.html",
+            "main": "projects/sppro-ng-example/src/main.ts",
+            "polyfills": "projects/sppro-ng-example/src/polyfills.ts",
+            "tsConfig": "projects/sppro-ng-example/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/sppro-ng-example/src/favicon.ico",
+              "projects/sppro-ng-example/src/assets"
+            ],
+            "styles": [
+              "projects/sppro-ng-example/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sppro-ng-example/src/environments/environment.ts",
+                  "with": "projects/sppro-ng-example/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sppro-ng-example:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sppro-ng-example:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sppro-ng-example:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sppro-ng-example/src/test.ts",
+            "polyfills": "projects/sppro-ng-example/src/polyfills.ts",
+            "tsConfig": "projects/sppro-ng-example/tsconfig.spec.json",
+            "karmaConfig": "projects/sppro-ng-example/karma.conf.js",
+            "assets": [
+              "projects/sppro-ng-example/src/favicon.ico",
+              "projects/sppro-ng-example/src/assets"
+            ],
+            "styles": [
+              "projects/sppro-ng-example/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sppro-ng-example/tsconfig.app.json",
+              "projects/sppro-ng-example/tsconfig.spec.json",
+              "projects/sppro-ng-example/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/sppro-ng-example/e2e/protractor.conf.js",
+            "devServerTarget": "sppro-ng-example:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sppro-ng-example:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "sppro-ng-annote"
+}

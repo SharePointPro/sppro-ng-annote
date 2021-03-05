@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of sppro-ng-annote
+ */
+export * from './lib/ng-annote/ng-annote.component';
+export * from './lib/sppro-ng-annote.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL3NwcHJvLW5nLWFubm90ZS9zcmMvcHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMscUNBQXFDLENBQUM7QUFDcEQsY0FBYyw4QkFBOEIsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2Ygc3Bwcm8tbmctYW5ub3RlXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvbmctYW5ub3RlL25nLWFubm90ZS5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvc3Bwcm8tbmctYW5ub3RlLm1vZHVsZSc7XG4iXX0=

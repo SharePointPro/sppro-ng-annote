@@ -1,0 +1,24 @@
+{
+  "name": "sppro-ng-annote",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+    "@fortawesome/angular-fontawesome": "^0.8.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "konva": "^7.2.5",
+    "ngx-color": "^6.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/sppro-ng-annote.umd.js",
+  "module": "fesm2015/sppro-ng-annote.js",
+  "es2015": "fesm2015/sppro-ng-annote.js",
+  "esm2015": "esm2015/sppro-ng-annote.js",
+  "fesm2015": "fesm2015/sppro-ng-annote.js",
+  "typings": "sppro-ng-annote.d.ts",
+  "metadata": "sppro-ng-annote.metadata.json",
+  "sideEffects": false
+}
