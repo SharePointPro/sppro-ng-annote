@@ -1,7 +1,7 @@
 # sppro-ng-annote
 > Image Annotation in Angular
 
-##React Version
+## React Version
 I have also created a React version here: https://github.com/SharePointPro/sppro-image-annote
 
 ## Live Demo
