@@ -1,6 +1,6 @@
 {
   "name": "sppro-ng-annote-workspace",
-  "version": "0.0.0",
+  "version": "0.9.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
