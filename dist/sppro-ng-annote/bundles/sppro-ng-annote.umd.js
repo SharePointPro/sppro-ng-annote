@@ -275,7 +275,7 @@
     NgAnnoteComponent.decorators = [
         { type: core.Component, args: [{
                     selector: 'sppro-ng-annote',
-                    template: "<div class='overlay sppro-overlay'>\n    <sppro-toolbar [(drawableType)]=\"drawableType\" [(color)]=\"color\" (onUndo)=\"onUndo()\" (onClear)=\"onClear()\" (onSave)=\"onSaveClick()\"></sppro-toolbar>\n    <div class=\"centeredBox\">\n        <div id=\"stage\">\n            \n        </div>\n    </div>\n\n</div>",
+                    template: "<div class='overlay sppro-overlay'>\r\n    <sppro-toolbar [(drawableType)]=\"drawableType\" [(color)]=\"color\" (onUndo)=\"onUndo()\" (onClear)=\"onClear()\" (onSave)=\"onSaveClick()\"></sppro-toolbar>\r\n    <div class=\"centeredBox\">\r\n        <div id=\"stage\">\r\n            \r\n        </div>\r\n    </div>\r\n\r\n</div>",
                     styles: [".centeredBox{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%)}.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}.closeButton{position:fixed;right:15px;top:15px;cursor:pointer}.crosshair{cursor:crosshair}.text{cursor:text}"]
                 },] }
     ];

@@ -1,6 +1,6 @@
 {
   "name": "sppro-ng-annote",
-  "version": "0.0.1",
+  "version": "0.9.8",
   "peerDependencies": {
     "@angular/common": "^11.1.2",
     "@angular/core": "^11.1.2",
