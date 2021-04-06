@@ -1,9 +1,11 @@
 import { createOfflineCompileUrlResolver } from '@angular/compiler';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import Konva from 'konva';
-import { DrawableEnum } from  '../enums/drawableEnum';
+import { DrawableEnum } from '../enums/drawableEnum';
 import shapeFactory from '../factories/shapeFactory';
 import textareaFactory from '../factories/textareaFactory';
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { IDimension } from '../interfaces/IDimension';
 
 const DEFAULT_DRAWABLE_TYPE: DrawableEnum = DrawableEnum.FreePathDrawable;
 const DEFAULT_FONT_FAMILY: string = 'Arial';
@@ -16,6 +18,16 @@ const DEFAULT_FONT_FAMILY: string = 'Arial';
 export class NgAnnoteComponent implements OnInit {
 
   @Output() onSave = new EventEmitter<string>();
+  @Output() onClose = new EventEmitter();
+
+
+  @Input() set imageSrc(value: string) {
+    if (value) {
+      this.initalize(value);
+    }
+  }
+
+  faWindowClose = faWindowClose;
 
   private _drawableType: DrawableEnum = DEFAULT_DRAWABLE_TYPE;
 
@@ -45,15 +57,26 @@ export class NgAnnoteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+
+  initalize(imageSrc): void {
     this.img = new Image();
 
     this.img.onload = () => {
 
+     
+
+      var dimension = this.getDimension();
+
       this.image = new Konva.Image({
         image: this.img,
+        width: dimension.width,
+        height: dimension.height
       });
 
-      this.initalizeStage();
+
+      this.initalizeStage(dimension.width, dimension.height);
 
       this.layer = new Konva.Layer({
       });
@@ -62,15 +85,40 @@ export class NgAnnoteComponent implements OnInit {
 
     };
 
-    this.img.src = "https://sharepointpro.github.io/sppro-image-annote/static/media/room.fdc5a868.jpg";
+    this.img.src = imageSrc;
   }
 
+  getDimension(): IDimension {
+    let width = this.img.width;
+    let height = this.img.height;
 
-  initalizeStage(): void {
+    //Scale image
+    if (this.img.width > (window.innerWidth - 50) || this.img.height > (window.innerHeight - 50)) {
+      var widthRatio = this.img.width / (window.innerWidth - 50);
+      var heightRatio = this.img.height / (window.innerHeight - 50);
+
+      if (widthRatio > heightRatio) {
+        width = this.img.width / widthRatio;
+        height = this.img.height / widthRatio;
+      } else {
+        width = this.img.width / heightRatio;
+        height = this.img.height / heightRatio;
+      }
+    }
+
+    return {
+      width: width,
+      height: height
+    };
+
+  }
+
+  initalizeStage(width: number, height: number): void {
+
     this.stage = new Konva.Stage({
       container: "stage",
-      width: this.img.width,
-      height: this.img.height
+      width: width,
+      height: height
     });
 
     this.stage.on('mousedown', (e) => { this.onMouseDown(e) });
@@ -128,7 +176,7 @@ export class NgAnnoteComponent implements OnInit {
   }
 
   onClear(): void {
-    while (this.layer.children.length > 1){
+    while (this.layer.children.length > 1) {
       this.onUndo();
     }
     this.layer.batchDraw();

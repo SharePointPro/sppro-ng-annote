@@ -5,6 +5,23 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ColorPhotoshopModule } from 'ngx-color/photoshop';
 import { CommonModule } from '@angular/common';
 
+import * as ɵngcc0 from '@angular/core';
+import * as ɵngcc1 from '@angular/common';
+import * as ɵngcc2 from '@fortawesome/angular-fontawesome';
+import * as ɵngcc3 from 'ngx-color/photoshop';
+
+function ToolbarComponent_div_21_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "div", 6);
+    ɵngcc0.ɵɵelementStart(1, "color-photoshop", 7);
+    ɵngcc0.ɵɵlistener("onAccept", function ToolbarComponent_div_21_Template_color_photoshop_onAccept_1_listener() { ɵngcc0.ɵɵrestoreView(_r2); const ctx_r1 = ɵngcc0.ɵɵnextContext(); return ctx_r1.onAccept(); })("onCancel", function ToolbarComponent_div_21_Template_color_photoshop_onCancel_1_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); const ctx_r3 = ɵngcc0.ɵɵnextContext(); return ctx_r3.onColorPicked($event); })("onChangeComplete", function ToolbarComponent_div_21_Template_color_photoshop_onChangeComplete_1_listener($event) { ɵngcc0.ɵɵrestoreView(_r2); const ctx_r4 = ɵngcc0.ɵɵnextContext(); return ctx_r4.onColorChange($event); });
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("color", ctx_r0.color);
+} }
 var DrawableEnum;
 (function (DrawableEnum) {
     DrawableEnum[DrawableEnum["FreePathDrawable"] = 0] = "FreePathDrawable";
@@ -261,17 +278,34 @@ class NgAnnoteComponent {
         this.layer.batchDraw();
     }
 }
-NgAnnoteComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'sppro-ng-annote',
-                template: "<div class='overlay sppro-overlay'>\r\n    <sppro-toolbar [(drawableType)]=\"drawableType\" [(color)]=\"color\" (onUndo)=\"onUndo()\" (onClear)=\"onClear()\" (onSave)=\"onSaveClick()\"></sppro-toolbar>\r\n    <div class=\"centeredBox\">\r\n        <div id=\"stage\">\r\n            \r\n        </div>\r\n    </div>\r\n\r\n</div>",
-                styles: [".centeredBox{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%)}.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}.closeButton{position:fixed;right:15px;top:15px;cursor:pointer}.crosshair{cursor:crosshair}.text{cursor:text}"]
-            },] }
-];
+NgAnnoteComponent.ɵfac = function NgAnnoteComponent_Factory(t) { return new (t || NgAnnoteComponent)(); };
+NgAnnoteComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NgAnnoteComponent, selectors: [["sppro-ng-annote"]], outputs: { onSave: "onSave" }, decls: 4, vars: 2, consts: [[1, "overlay", "sppro-overlay"], [3, "drawableType", "color", "drawableTypeChange", "colorChange", "onUndo", "onClear", "onSave"], [1, "centeredBox"], ["id", "stage"]], template: function NgAnnoteComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵelementStart(1, "sppro-toolbar", 1);
+        ɵngcc0.ɵɵlistener("drawableTypeChange", function NgAnnoteComponent_Template_sppro_toolbar_drawableTypeChange_1_listener($event) { return ctx.drawableType = $event; })("colorChange", function NgAnnoteComponent_Template_sppro_toolbar_colorChange_1_listener($event) { return ctx.color = $event; })("onUndo", function NgAnnoteComponent_Template_sppro_toolbar_onUndo_1_listener() { return ctx.onUndo(); })("onClear", function NgAnnoteComponent_Template_sppro_toolbar_onClear_1_listener() { return ctx.onClear(); })("onSave", function NgAnnoteComponent_Template_sppro_toolbar_onSave_1_listener() { return ctx.onSaveClick(); });
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(2, "div", 2);
+        ɵngcc0.ɵɵelement(3, "div", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("drawableType", ctx.drawableType)("color", ctx.color);
+    } }, directives: function () { return [ToolbarComponent]; }, styles: [".centeredBox[_ngcontent-%COMP%]{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%)}.overlay[_ngcontent-%COMP%]{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}.closeButton[_ngcontent-%COMP%]{position:fixed;right:15px;top:15px;cursor:pointer}.crosshair[_ngcontent-%COMP%]{cursor:crosshair}.text[_ngcontent-%COMP%]{cursor:text}"] });
 NgAnnoteComponent.ctorParameters = () => [];
 NgAnnoteComponent.propDecorators = {
     onSave: [{ type: Output }]
 };
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(NgAnnoteComponent, [{
+        type: Component,
+        args: [{
+                selector: 'sppro-ng-annote',
+                template: "<div class='overlay sppro-overlay'>\r\n    <sppro-toolbar [(drawableType)]=\"drawableType\" [(color)]=\"color\" (onUndo)=\"onUndo()\" (onClear)=\"onClear()\" (onSave)=\"onSaveClick()\"></sppro-toolbar>\r\n    <div class=\"centeredBox\">\r\n        <div id=\"stage\">\r\n            \r\n        </div>\r\n    </div>\r\n\r\n</div>",
+                styles: [".centeredBox{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%)}.overlay{position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}.closeButton{position:fixed;right:15px;top:15px;cursor:pointer}.crosshair{cursor:crosshair}.text{cursor:text}"]
+            }]
+    }], function () { return []; }, { onSave: [{
+            type: Output
+        }] }); })();
 
 class ToolbarComponent {
     constructor() {
@@ -321,13 +355,102 @@ class ToolbarComponent {
         this.onColorChange(event);
     }
 }
-ToolbarComponent.decorators = [
-    { type: Component, args: [{
-                selector: 'sppro-toolbar',
-                template: "<div class=\"toolbar sppro-toolbar\">\n    <table class=\"toolbarTable\">\n\n        <tbody>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.FreePathDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.FreePathDrawable)\">\n                    <fa-icon [icon]=\"faPencilAlt\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.SquareDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.SquareDrawable)\">\n                    <fa-icon [icon]=\"faSquare\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.CircleDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.CircleDrawable)\">\n                    <fa-icon [icon]=\"faCircle\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.ArrowDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.ArrowDrawable)\">\n                    <fa-icon [icon]=\"faLongArrowAltRight\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.TextDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.TextDrawable)\">\n                    <fa-icon [icon]=\"faFont\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"showColor()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faSquareFull\" [style.color]=\"color\"></fa-icon>\n                    <div *ngIf=\"showColorPicker\" class='color-picker-wrapper'>\n                        <color-photoshop class='color-picker' [color]=\"color\" (onAccept)=\"onAccept()\" (onCancel)=\"onColorPicked($event)\" (onChangeComplete)=\"onColorChange($event)\"></color-photoshop>\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onUndo.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faUndo\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onClear.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faBan\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onSave.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faSave\"></fa-icon>\n                </td>\n            </tr>\n\n\n        </tbody>\n    </table>\n</div>",
-                styles: [".toolbar{position:fixed;left:0;width:50px;bottom:0;top:0;border:1px solid #888;background:#333;border-radius:5px}.toolButton{overflow:hidden;font-size:18px;width:32px;height:32px;background-color:#333;box-shadow:0 0 2px #66a;padding:1px;margin:0;cursor:pointer;color:#fff}.toolbarTable{width:100%;text-align:center}.active{background-color:rgba(0,0,0,.5)}.color-picker,.color-picker-wrapper{position:absolute}.color-picker{top:0;left:50px}"]
-            },] }
-];
+ToolbarComponent.ɵfac = function ToolbarComponent_Factory(t) { return new (t || ToolbarComponent)(); };
+ToolbarComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: ToolbarComponent, selectors: [["sppro-toolbar"]], inputs: { drawableType: "drawableType", color: "color" }, outputs: { drawableTypeChange: "drawableTypeChange", colorChange: "colorChange", onUndo: "onUndo", onClear: "onClear", onSave: "onSave" }, decls: 31, vars: 17, consts: [[1, "toolbar", "sppro-toolbar"], [1, "toolbarTable"], [3, "ngClass", "click"], [3, "icon"], [1, "toolButton", 3, "click"], ["class", "color-picker-wrapper", 4, "ngIf"], [1, "color-picker-wrapper"], [1, "color-picker", 3, "color", "onAccept", "onCancel", "onChangeComplete"]], template: function ToolbarComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵelementStart(1, "table", 1);
+        ɵngcc0.ɵɵelementStart(2, "tbody");
+        ɵngcc0.ɵɵelementStart(3, "tr");
+        ɵngcc0.ɵɵelementStart(4, "td", 2);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_4_listener() { return ctx.onDrawableChange(ctx.DrawableEnum.FreePathDrawable); });
+        ɵngcc0.ɵɵelement(5, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(6, "tr");
+        ɵngcc0.ɵɵelementStart(7, "td", 2);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_7_listener() { return ctx.onDrawableChange(ctx.DrawableEnum.SquareDrawable); });
+        ɵngcc0.ɵɵelement(8, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(9, "tr");
+        ɵngcc0.ɵɵelementStart(10, "td", 2);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_10_listener() { return ctx.onDrawableChange(ctx.DrawableEnum.CircleDrawable); });
+        ɵngcc0.ɵɵelement(11, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(12, "tr");
+        ɵngcc0.ɵɵelementStart(13, "td", 2);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_13_listener() { return ctx.onDrawableChange(ctx.DrawableEnum.ArrowDrawable); });
+        ɵngcc0.ɵɵelement(14, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(15, "tr");
+        ɵngcc0.ɵɵelementStart(16, "td", 2);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_16_listener() { return ctx.onDrawableChange(ctx.DrawableEnum.TextDrawable); });
+        ɵngcc0.ɵɵelement(17, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(18, "tr");
+        ɵngcc0.ɵɵelementStart(19, "td", 4);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_19_listener() { return ctx.showColor(); });
+        ɵngcc0.ɵɵelement(20, "fa-icon", 3);
+        ɵngcc0.ɵɵtemplate(21, ToolbarComponent_div_21_Template, 2, 1, "div", 5);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(22, "tr");
+        ɵngcc0.ɵɵelementStart(23, "td", 4);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_23_listener() { return ctx.onUndo.emit(); });
+        ɵngcc0.ɵɵelement(24, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(25, "tr");
+        ɵngcc0.ɵɵelementStart(26, "td", 4);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_26_listener() { return ctx.onClear.emit(); });
+        ɵngcc0.ɵɵelement(27, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementStart(28, "tr");
+        ɵngcc0.ɵɵelementStart(29, "td", 4);
+        ɵngcc0.ɵɵlistener("click", function ToolbarComponent_Template_td_click_29_listener() { return ctx.onSave.emit(); });
+        ɵngcc0.ɵɵelement(30, "fa-icon", 3);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵadvance(4);
+        ɵngcc0.ɵɵproperty("ngClass", ctx.getClass(ctx.DrawableEnum.FreePathDrawable));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("icon", ctx.faPencilAlt);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngClass", ctx.getClass(ctx.DrawableEnum.SquareDrawable));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("icon", ctx.faSquare);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngClass", ctx.getClass(ctx.DrawableEnum.CircleDrawable));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("icon", ctx.faCircle);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngClass", ctx.getClass(ctx.DrawableEnum.ArrowDrawable));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("icon", ctx.faLongArrowAltRight);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngClass", ctx.getClass(ctx.DrawableEnum.TextDrawable));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("icon", ctx.faFont);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵstyleProp("color", ctx.color);
+        ɵngcc0.ɵɵproperty("icon", ctx.faSquareFull);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.showColorPicker);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵproperty("icon", ctx.faUndo);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵproperty("icon", ctx.faBan);
+        ɵngcc0.ɵɵadvance(3);
+        ɵngcc0.ɵɵproperty("icon", ctx.faSave);
+    } }, directives: [ɵngcc1.NgClass, ɵngcc2.FaIconComponent, ɵngcc1.NgIf, ɵngcc3.PhotoshopComponent], styles: [".toolbar[_ngcontent-%COMP%]{position:fixed;left:0;width:50px;bottom:0;top:0;border:1px solid #888;background:#333;border-radius:5px}.toolButton[_ngcontent-%COMP%]{overflow:hidden;font-size:18px;width:32px;height:32px;background-color:#333;box-shadow:0 0 2px #66a;padding:1px;margin:0;cursor:pointer;color:#fff}.toolbarTable[_ngcontent-%COMP%]{width:100%;text-align:center}.active[_ngcontent-%COMP%]{background-color:rgba(0,0,0,.5)}.color-picker[_ngcontent-%COMP%], .color-picker-wrapper[_ngcontent-%COMP%]{position:absolute}.color-picker[_ngcontent-%COMP%]{top:0;left:50px}"] });
 ToolbarComponent.ctorParameters = () => [];
 ToolbarComponent.propDecorators = {
     drawableTypeChange: [{ type: Output }],
@@ -338,11 +461,43 @@ ToolbarComponent.propDecorators = {
     onClear: [{ type: Output }],
     onSave: [{ type: Output }]
 };
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(ToolbarComponent, [{
+        type: Component,
+        args: [{
+                selector: 'sppro-toolbar',
+                template: "<div class=\"toolbar sppro-toolbar\">\n    <table class=\"toolbarTable\">\n\n        <tbody>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.FreePathDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.FreePathDrawable)\">\n                    <fa-icon [icon]=\"faPencilAlt\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.SquareDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.SquareDrawable)\">\n                    <fa-icon [icon]=\"faSquare\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.CircleDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.CircleDrawable)\">\n                    <fa-icon [icon]=\"faCircle\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.ArrowDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.ArrowDrawable)\">\n                    <fa-icon [icon]=\"faLongArrowAltRight\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onDrawableChange(DrawableEnum.TextDrawable)\"\n                    [ngClass]=\"getClass(DrawableEnum.TextDrawable)\">\n                    <fa-icon [icon]=\"faFont\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"showColor()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faSquareFull\" [style.color]=\"color\"></fa-icon>\n                    <div *ngIf=\"showColorPicker\" class='color-picker-wrapper'>\n                        <color-photoshop class='color-picker' [color]=\"color\" (onAccept)=\"onAccept()\" (onCancel)=\"onColorPicked($event)\" (onChangeComplete)=\"onColorChange($event)\"></color-photoshop>\n                    </div>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onUndo.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faUndo\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onClear.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faBan\"></fa-icon>\n                </td>\n            </tr>\n            <tr>\n                <td (click)=\"onSave.emit()\" class=\"toolButton\">\n                    <fa-icon [icon]=\"faSave\"></fa-icon>\n                </td>\n            </tr>\n\n\n        </tbody>\n    </table>\n</div>",
+                styles: [".toolbar{position:fixed;left:0;width:50px;bottom:0;top:0;border:1px solid #888;background:#333;border-radius:5px}.toolButton{overflow:hidden;font-size:18px;width:32px;height:32px;background-color:#333;box-shadow:0 0 2px #66a;padding:1px;margin:0;cursor:pointer;color:#fff}.toolbarTable{width:100%;text-align:center}.active{background-color:rgba(0,0,0,.5)}.color-picker,.color-picker-wrapper{position:absolute}.color-picker{top:0;left:50px}"]
+            }]
+    }], function () { return []; }, { drawableTypeChange: [{
+            type: Output
+        }], colorChange: [{
+            type: Output
+        }], onUndo: [{
+            type: Output
+        }], onClear: [{
+            type: Output
+        }], onSave: [{
+            type: Output
+        }], drawableType: [{
+            type: Input
+        }], color: [{
+            type: Input
+        }] }); })();
 
 class SpproNgAnnoteModule {
 }
-SpproNgAnnoteModule.decorators = [
-    { type: NgModule, args: [{
+SpproNgAnnoteModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: SpproNgAnnoteModule });
+SpproNgAnnoteModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function SpproNgAnnoteModule_Factory(t) { return new (t || SpproNgAnnoteModule)(); }, imports: [[
+            FontAwesomeModule,
+            ColorPhotoshopModule,
+            CommonModule
+        ]] });
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(SpproNgAnnoteModule, { declarations: function () { return [NgAnnoteComponent, ToolbarComponent]; }, imports: function () { return [FontAwesomeModule,
+        ColorPhotoshopModule,
+        CommonModule]; }, exports: function () { return [NgAnnoteComponent]; } }); })();
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(SpproNgAnnoteModule, [{
+        type: NgModule,
+        args: [{
                 declarations: [
                     NgAnnoteComponent,
                     ToolbarComponent
@@ -353,8 +508,8 @@ SpproNgAnnoteModule.decorators = [
                     CommonModule
                 ],
                 exports: [NgAnnoteComponent]
-            },] }
-];
+            }]
+    }], null, null); })();
 
 /*
  * Public API Surface of sppro-ng-annote
@@ -365,4 +520,5 @@ SpproNgAnnoteModule.decorators = [
  */
 
 export { NgAnnoteComponent, SpproNgAnnoteModule, ToolbarComponent as ɵa };
+
 //# sourceMappingURL=sppro-ng-annote.js.map

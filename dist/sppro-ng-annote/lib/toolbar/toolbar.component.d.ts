@@ -1,5 +1,6 @@
 import { EventEmitter, OnInit } from '@angular/core';
 import { DrawableEnum } from '../enums/drawableEnum';
+import * as ɵngcc0 from '@angular/core';
 export declare class ToolbarComponent implements OnInit {
     drawableTypeChange: EventEmitter<DrawableEnum>;
     drawableType: DrawableEnum;
@@ -27,4 +28,8 @@ export declare class ToolbarComponent implements OnInit {
     onColorChange(event: any): void;
     onAccept(): void;
     onColorPicked(event: any): void;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<ToolbarComponent, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<ToolbarComponent, "sppro-toolbar", never, { "drawableType": "drawableType"; "color": "color"; }, { "drawableTypeChange": "drawableTypeChange"; "colorChange": "colorChange"; "onUndo": "onUndo"; "onClear": "onClear"; "onSave": "onSave"; }, never, never>;
 }
+
+//# sourceMappingURL=toolbar.component.d.ts.map

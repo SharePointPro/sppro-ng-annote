@@ -25,3 +25,9 @@
 .text { 
     cursor: text;
 }
+.close-button {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}

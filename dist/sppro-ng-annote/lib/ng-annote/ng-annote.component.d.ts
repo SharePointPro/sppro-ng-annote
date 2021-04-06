@@ -1,6 +1,7 @@
 import { EventEmitter, OnInit } from '@angular/core';
 import Konva from 'konva';
 import { DrawableEnum } from '../enums/drawableEnum';
+import * as ɵngcc0 from '@angular/core';
 export declare class NgAnnoteComponent implements OnInit {
     onSave: EventEmitter<string>;
     private _drawableType;
@@ -24,4 +25,8 @@ export declare class NgAnnoteComponent implements OnInit {
     onMouseUp(e: any): void;
     onUndo(): void;
     onMouseMove(e: any): void;
+    static ɵfac: ɵngcc0.ɵɵFactoryDef<NgAnnoteComponent, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<NgAnnoteComponent, "sppro-ng-annote", never, {}, { "onSave": "onSave"; }, never, never>;
 }
+
+//# sourceMappingURL=ng-annote.component.d.ts.map

@@ -1,5 +1,8 @@
 <div class='overlay sppro-overlay'>
     <sppro-toolbar [(drawableType)]="drawableType" [(color)]="color" (onUndo)="onUndo()" (onClear)="onClear()" (onSave)="onSaveClick()"></sppro-toolbar>
+    <div class="close-button">
+        <fa-icon [icon]="faWindowClose" (click)="onClose.emit()"></fa-icon>
+    </div>
     <div class="centeredBox">
         <div id="stage">
             

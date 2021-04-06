@@ -1,0 +1,1 @@
+{"version":3,"file":"sppro-ng-annote.d.ts","sources":["sppro-ng-annote.d.ts"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","sourcesContent":["/**\r\n * Generated bundle index. Do not edit.\r\n */\r\nexport * from './public-api';\r\nexport { ToolbarComponent as ɵa } from './lib/toolbar/toolbar.component';\r\n"]}
